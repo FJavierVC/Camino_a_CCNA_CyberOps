@@ -151,33 +151,34 @@ Rango Utilizable = 192.168.1.65 - 192.168.1.94
 R = RED     I = Incremento (el incremento lo tomamos de los Host Totales)
 
 **RED3** 25 Host Utilizables
-50 HU
+25 HU
 (Para el siguiente paso no tenemos que sustituir la N por los HU, sino que debemos buscar un numero que al ser potencia de 2 se acerque a la cantidiad de host nos estan pidiendo)
-2^6-2 = 62 Host Utilizables
-2^6 = 64 Host Totales.
+2^5-2 = 30  Host Utilizables
+2^5 = 32 Host Totales.
 (Para la mascara tomamos en cuenta la mascara original de la red y a esa le apagamos la cantidad de bits que se tomaron prestados en la parte anterior)
-MASK = 255.255.255.11000000 = 255.255.255.192
-Prefijo = /26
+MASK = 255.255.255.11100000 = 255.255.255.224
+Prefijo = /27
 (la red siempre la comenzamos con 0)
 (el incremento es la cantidad de HT)
-RED - Broadcast =  R + I - 1 = 0 + 63 - 1 = 63
-Rango de red y broadcast 192.168.1.0 - 192.168.1.63
+RED - Broadcast =  R + I - 1 = 96 + 32 - 1 = 127
+Rango de red y broadcast 192.168.1.96 - 192.168.1.127
 (aumentamos 1 a la ip de red y para la ultima direccion utilizable le restamos 1 a la ip de broadcas)
-Rango Utilizable = 192.168.1.1 - 192.168.1.62
+Rango Utilizable = 192.168.1.97 - 192.168.1.125
 R = RED     I = Incremento (el incremento lo tomamos de los Host Totales)
 
 **RED4** 10 Host Utilizables.
-50 HU
+10 HU
 (Para el siguiente paso no tenemos que sustituir la N por los HU, sino que debemos buscar un numero que al ser potencia de 2 se acerque a la cantidiad de host nos estan pidiendo)
-2^6-2 = 62 Host Utilizables
-2^6 = 64 Host Totales.
+2^4-2 = 14  Host Utilizables
+2^4 = 16 Host Totales.
 (Para la mascara tomamos en cuenta la mascara original de la red y a esa le apagamos la cantidad de bits que se tomaron prestados en la parte anterior)
-MASK = 255.255.255.11000000 = 255.255.255.192
-Prefijo = /26
+MASK = 255.255.255.11110000 = 255.255.255.
+Prefijo = /28
 (la red siempre la comenzamos con 0)
 (el incremento es la cantidad de HT)
-RED - Broadcast =  R + I - 1 = 0 + 63 - 1 = 63
-Rango de red y broadcast 192.168.1.0 - 192.168.1.63
+RED - Broadcast =  R + I - 1 = 128 + 16 - 1 = 143
+Rango de red y broadcast 192.168.1.128 - 192.168.1.143
 (aumentamos 1 a la ip de red y para la ultima direccion utilizable le restamos 1 a la ip de broadcas)
-Rango Utilizable = 192.168.1.1 - 192.168.1.62
+Rango Utilizable = 192.168.1.129 - 192.168.1.142
 R = RED     I = Incremento (el incremento lo tomamos de los Host Totales)
+
